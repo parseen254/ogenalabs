@@ -30,11 +30,13 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-// Assets
-import CoverImage from "assets/img/CoverImage.png";
-import React from "react";
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
-import AuthCover from "layouts/AuthCover";
+
+import AuthCover from "../../../layouts/AuthCover";
+import React from "react";
+
+// Assets
+const CoverImage = "assets/img/CoverImage.png";
 
 function SignInCover() {
   // Chakra color mode

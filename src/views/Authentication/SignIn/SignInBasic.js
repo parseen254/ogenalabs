@@ -29,11 +29,13 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-// Assets
-import BasicImage from "assets/img/BasicImage.png";
-import React from "react";
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
-import AuthBasic from "layouts/AuthBasic";
+
+import AuthBasic from "../../../layouts/AuthBasic";
+import React from "react";
+
+// Assets
+const BasicImage = "assets/img/BasicImage.png";
 
 function SignInCover() {
   // Chakra color mode
@@ -46,7 +48,7 @@ function SignInCover() {
   return (
     <AuthBasic
       title="Welcome!"
-      description="Use these awesome forms to login or create new account in your project for free."
+      description="Sign in to your account to continue."
       image={BasicImage}
     >
       <Flex
@@ -64,7 +66,7 @@ function SignInCover() {
           background="transparent"
           borderRadius="15px"
           p="40px"
-          mx={{ base: "100px" }}
+          mx={{ base: "10px" }}
           mb={{ base: "20px", md: "auto" }}
           bg={bgForm}
           boxShadow={useColorModeValue(
@@ -72,120 +74,20 @@ function SignInCover() {
             "unset"
           )}
         >
-          <Text
-            fontSize="xl"
-            color={textColor}
-            fontWeight="bold"
-            textAlign="center"
-            mb="22px"
-          >
-            Sign In with
-          </Text>
-          <HStack spacing="15px" justify="center" mb="22px">
-            <Flex
-              justify="center"
-              align="center"
-              w="75px"
-              h="75px"
-              borderRadius="8px"
-              border={useColorModeValue("1px solid", "0px")}
-              borderColor="gray.200"
-              cursor="pointer"
-              transition="all .25s ease"
-              bg={bgIcons}
-              _hover={{ bg: bgIconsHover }}
-            >
-              <Link href="#">
-                <Icon as={FaFacebook} color={colorIcons} w="30px" h="30px" />
-              </Link>
-            </Flex>
-            <Flex
-              justify="center"
-              align="center"
-              w="75px"
-              h="75px"
-              borderRadius="8px"
-              border={useColorModeValue("1px solid", "0px")}
-              borderColor="gray.200"
-              cursor="pointer"
-              transition="all .25s ease"
-              bg={bgIcons}
-              _hover={{ bg: bgIconsHover }}
-            >
-              <Link href="#">
-                <Icon
-                  as={FaApple}
-                  color={colorIcons}
-                  w="30px"
-                  h="30px"
-                  _hover={{ filter: "brightness(120%)" }}
-                />
-              </Link>
-            </Flex>
-            <Flex
-              justify="center"
-              align="center"
-              w="75px"
-              h="75px"
-              borderRadius="8px"
-              border={useColorModeValue("1px solid", "0px")}
-              borderColor="gray.200"
-              cursor="pointer"
-              transition="all .25s ease"
-              bg={bgIcons}
-              _hover={{ bg: bgIconsHover }}
-            >
-              <Link href="#">
-                <Icon
-                  as={FaGoogle}
-                  color={colorIcons}
-                  w="30px"
-                  h="30px"
-                  _hover={{ filter: "brightness(120%)" }}
-                />
-              </Link>
-            </Flex>
-          </HStack>
-          <Text
-            fontSize="lg"
-            color="gray.400"
-            fontWeight="bold"
-            textAlign="center"
-            mb="22px"
-          >
-            or
-          </Text>
           <FormControl>
             <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
-              Name
+              Email
             </FormLabel>
             <Input
               variant="auth"
               fontSize="sm"
               ms="4px"
-              type="text"
-              placeholder="Your full name"
+              type="email"
+              placeholder="Enter your email"
               mb="24px"
               size="lg"
             />
-            <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
-              Password
-            </FormLabel>
-            <Input
-              variant="auth"
-              fontSize="sm"
-              ms="4px"
-              type="password"
-              placeholder="Your password"
-              mb="24px"
-              size="lg"
-            />
-            <FormControl display="flex" alignItems="center" mb="24px">
-              <Switch id="remember-login" colorScheme="blue" me="10px" />
-              <FormLabel htmlFor="remember-login" mb="0" fontWeight="normal">
-                Remember me
-              </FormLabel>
-            </FormControl>
+            
             <Button
               fontSize="10px"
               variant="dark"
@@ -194,7 +96,7 @@ function SignInCover() {
               h="45"
               mb="24px"
             >
-              SIGN IN
+              GET SIGN IN LINK
             </Button>
           </FormControl>
           <Flex
