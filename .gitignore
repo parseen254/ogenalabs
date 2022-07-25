@@ -38,3 +38,10 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# editors
+.vscode
+.idea
+
+# strictly allow yarn only
+package-lock.json
