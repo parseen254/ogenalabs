@@ -1,19 +1,24 @@
-// src/pages/_app.tsx
-import { withTRPC } from "@trpc/next";
+import "../styles/globals.css";
+
 import type { AppRouter } from "../server/router";
 import type { AppType } from "next/dist/shared/lib/utils";
-import superjson from "superjson";
+import { ChakraProvider } from "@chakra-ui/react";
 import { SessionProvider } from "next-auth/react";
-import "../styles/globals.css";
+import superjson from "superjson";
+import theme from "../src/theme/theme.js";
+// src/pages/_app.tsx
+import { withTRPC } from "@trpc/next";
 
 const MyApp: AppType = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
   return (
-    <SessionProvider session={session}>
-      <Component {...pageProps} />
-    </SessionProvider>
+    <ChakraProvider theme={theme} resetCSS={false}>
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
+    </ChakraProvider>
   );
 };
 
