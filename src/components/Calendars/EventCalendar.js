@@ -15,8 +15,8 @@
 
 */
 
-import React from "react";
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
+import React from "react";
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
 
@@ -31,7 +31,6 @@ function EventCalendar(props) {
       initialDate={initialDate}
       contentHeight="600"
       events={calendarData}
-      initialDate={initialDate}
       editable={true}
       minHeight="400px"
       height="100%"

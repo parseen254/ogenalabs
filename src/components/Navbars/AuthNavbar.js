@@ -15,6 +15,15 @@
 
 */
 
+import {
+  ArgonLogoDark,
+  ArgonLogoLight,
+  ChakraLogoBlue,
+  ChakraLogoDark,
+  ChakraLogoLight,
+  CreativeTimLogo,
+  RocketIcon,
+} from "components/Icons/Icons";
 // Chakra imports
 import {
   Box,
@@ -25,33 +34,25 @@ import {
   Icon,
   Link,
   Menu,
+  MenuButton,
   MenuItem,
   MenuList,
-  MenuButton,
   Stack,
   Text,
-  useColorModeValue,
   useColorMode,
+  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import bgCard from "assets/img/background-card-reports.png";
+import { GoChevronDown, GoChevronRight } from "react-icons/go";
+
+import { AiFillStar } from "react-icons/ai";
 import IconBox from "components/Icons/IconBox";
-import {
-  CreativeTimLogo,
-  RocketIcon,
-  ChakraLogoDark,
-  ChakraLogoLight,
-  ArgonLogoDark,
-  ArgonLogoLight,
-  ChakraLogoBlue,
-} from "components/Icons/Icons";
-import { SidebarResponsive } from "components/Sidebar/Sidebar";
+import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import React from "react";
-import { AiFillStar } from "react-icons/ai";
-import { GoChevronDown, GoChevronRight } from "react-icons/go";
-import { NavLink } from "react-router-dom";
 import { SidebarContext } from "contexts/SidebarContext";
+import { SidebarResponsive } from "components/Sidebar/Sidebar";
+import bgCard from "assets/img/background-card-reports.png";
 import routes from "routes.js";
 
 export default function AuthNavbar(props) {
@@ -371,9 +372,9 @@ export default function AuthNavbar(props) {
   };
 
   const createExtraLinks = (routes) => {
-    return routes.map((link) => {
+    return routes.map((link, index) => {
       return (
-        <NavLink to={link.layout + link.path}>
+        <NavLink to={link.layout + link.path} key={index}>
           <MenuItem
             ps="36px"
             py="0px"
@@ -446,9 +447,9 @@ export default function AuthNavbar(props) {
   };
 
   const createApplicationLinks = (routes) => {
-    return routes.map((link) => {
+    return routes.map((link, index) => {
       return (
-        <NavLink to={link.layout + link.path}>
+        <NavLink key={index} to={link.layout + link.path}>
           <Stack direction="row" spacing="12px" align="center" cursor="pointer">
             <IconBox bg="blue.500" color="white" h="30px" w="30px">
               {link.authIcon}

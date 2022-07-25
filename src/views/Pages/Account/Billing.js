@@ -27,32 +27,33 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-// Assets
-import BackgroundCard1 from "assets/img/BackgroundCard1.png";
-// Custom components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import IconBox from "components/Icons/IconBox";
-import { MastercardIcon, VisaIcon } from "components/Icons/Icons";
-import { HSeparator } from "components/Separator/Separator";
-import BillingRow from "components/Tables/BillingRow";
-import InvoicesRow from "components/Tables/InvoicesRow";
-import TransactionRow from "components/Tables/TransactionRow";
-import React from "react";
 import {
   FaPaypal,
   FaPencilAlt,
   FaRegCalendarAlt,
   FaWallet,
 } from "react-icons/fa";
-import { RiMastercardFill } from "react-icons/ri";
+import { MastercardIcon, VisaIcon } from "components/Icons/Icons";
 import {
   billingData,
   invoicesData,
   newestTransactions,
   olderTransactions,
 } from "variables/general";
+
+// Assets
+import BackgroundCard1 from "assets/img/BackgroundCard1.png";
+import BillingRow from "components/Tables/BillingRow";
+// Custom components
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
+import CardHeader from "components/Card/CardHeader.js";
+import { HSeparator } from "components/Separator/Separator";
+import IconBox from "components/Icons/IconBox";
+import InvoicesRow from "components/Tables/InvoicesRow";
+import React from "react";
+import { RiMastercardFill } from "react-icons/ri";
+import TransactionRow from "components/Tables/TransactionRow";
 
 function Billing() {
   // Chakra color mode
@@ -314,9 +315,10 @@ function Billing() {
           </CardHeader>
           <CardBody>
             <Flex direction="column" w="100%">
-              {invoicesData.map((row) => {
+              {invoicesData.map((row, index) => {
                 return (
                   <InvoicesRow
+                    key={index}
                     date={row.date}
                     code={row.code}
                     price={row.price}
@@ -339,9 +341,10 @@ function Billing() {
             </CardHeader>
             <CardBody>
               <Flex direction="column" w="100%">
-                {billingData.map((row) => {
+                {billingData.map((row, index) => {
                   return (
                     <BillingRow
+                      key={index}
                       name={row.name}
                       company={row.company}
                       email={row.email}
@@ -394,9 +397,10 @@ function Billing() {
               >
                 NEWEST
               </Text>
-              {newestTransactions.map((row) => {
+              {newestTransactions.map((row, index) => {
                 return (
                   <TransactionRow
+                    key={index}
                     name={row.name}
                     logo={row.logo}
                     date={row.date}
@@ -412,9 +416,10 @@ function Billing() {
               >
                 OLDER
               </Text>
-              {olderTransactions.map((row) => {
+              {olderTransactions.map((row, index) => {
                 return (
                   <TransactionRow
+                    key={index}
                     name={row.name}
                     logo={row.logo}
                     date={row.date}

@@ -15,8 +15,6 @@
 
 */
 
-import { useReducer } from "react";
-
 import {
   Avatar,
   AvatarGroup,
@@ -32,15 +30,6 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-// Assets
-import avatar2 from "assets/img/avatars/avatar2.png";
-import avatar3 from "assets/img/avatars/avatar3.png";
-import avatar4 from "assets/img/avatars/avatar4.png";
-import avatar5 from "assets/img/avatars/avatar5.png";
-import avatar6 from "assets/img/avatars/avatar6.png";
-import ImageArchitect1 from "assets/img/ImageArchitect1.png";
-import ImageArchitect2 from "assets/img/ImageArchitect2.png";
-import ImageArchitect3 from "assets/img/ImageArchitect3.png";
 import {
   FaCube,
   FaFacebook,
@@ -49,12 +38,23 @@ import {
   FaPlus,
   FaTwitter,
 } from "react-icons/fa";
-import { IoDocumentsSharp } from "react-icons/io5";
+
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 import CardHeader from "components/Card/CardHeader";
 import { HSeparator } from "components/Separator/Separator";
+import ImageArchitect1 from "assets/img/ImageArchitect1.png";
+import ImageArchitect2 from "assets/img/ImageArchitect2.png";
+import ImageArchitect3 from "assets/img/ImageArchitect3.png";
+import { IoDocumentsSharp } from "react-icons/io5";
+// Assets
+import avatar2 from "assets/img/avatars/avatar2.png";
+import avatar3 from "assets/img/avatars/avatar3.png";
+import avatar4 from "assets/img/avatars/avatar4.png";
+import avatar5 from "assets/img/avatars/avatar5.png";
+import avatar6 from "assets/img/avatars/avatar6.png";
+import { useReducer } from "react";
 
 const reducer = (state, action) => {
   if (action.type === "SWITCH_ACTIVE") {
@@ -612,7 +612,11 @@ function Overview() {
           >
             <Flex direction="column">
               <Box mb="20px" position="relative" borderRadius="15px">
-                <Image src={ImageArchitect1} borderRadius="15px" />
+                <Image
+                  alt="Image Architect"
+                  src={ImageArchitect1}
+                  borderRadius="15px"
+                />
                 <Box
                   w="100%"
                   h="100%"
@@ -653,7 +657,11 @@ function Overview() {
             </Flex>
             <Flex direction="column">
               <Box mb="20px" position="relative" borderRadius="15px">
-                <Image src={ImageArchitect2} borderRadius="15px" />
+                <Image
+                  alt="Image Architect 2"
+                  src={ImageArchitect2}
+                  borderRadius="15px"
+                />
                 <Box
                   w="100%"
                   h="100%"
@@ -694,7 +702,11 @@ function Overview() {
             </Flex>
             <Flex direction="column">
               <Box mb="20px" position="relative" borderRadius="15px">
-                <Image src={ImageArchitect3} borderRadius="15px" />
+                <Image
+                  alt="Image Architect 3"
+                  src={ImageArchitect3}
+                  borderRadius="15px"
+                />
                 <Box
                   w="100%"
                   h="100%"

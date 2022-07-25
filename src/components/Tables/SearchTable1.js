@@ -35,8 +35,8 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
-import React, { useMemo } from "react";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import React, { useMemo } from "react";
 import {
   TiArrowSortedDown,
   TiArrowSortedUp,
@@ -202,7 +202,6 @@ function SearchTable1(props) {
           direction={{ sm: "column", md: "row" }}
           justify="space-between"
           align="center"
-          px="22px"
           w="100%"
           px={{ md: "22px" }}
         >

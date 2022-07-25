@@ -15,7 +15,6 @@
 
 */
 
-import React, { useState } from "react";
 // Chakra imports
 import {
   Accordion,
@@ -34,6 +33,10 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import React, { useState } from "react";
+
+import Card from "components/Card/Card";
 // Assets
 import basic from "assets/img/basic-auth.png";
 import deloitteLogo from "assets/svg/deloitte-logo.svg";
@@ -42,8 +45,6 @@ import googleLogo from "assets/svg/google-logo.svg";
 import microsoftLogo from "assets/svg/microsoft-logo.svg";
 import msnLogo from "assets/svg/msn-logo.svg";
 import zohoLogo from "assets/svg/zoho-logo.svg";
-import Card from "components/Card/Card";
-import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
 function Pricing() {
   const [activeButton, setActiveButton] = useState({
@@ -423,16 +424,42 @@ function Pricing() {
             spacingX={{ sm: "65px", lg: "40px", xl: "65px" }}
             spacingY={{ sm: "30px" }}
           >
-            <Image src={googleLogo} alignSelf="center" justifySelf="center" />
-            <Image src={msnLogo} alignSelf="center" justifySelf="center" />
             <Image
+              alt="logo"
+              src={googleLogo}
+              alignSelf="center"
+              justifySelf="center"
+            />
+            <Image
+              alt="logo"
+              src={msnLogo}
+              alignSelf="center"
+              justifySelf="center"
+            />
+            <Image
+              alt="logo"
               src={microsoftLogo}
               alignSelf="center"
               justifySelf="center"
             />
-            <Image src={zohoLogo} alignSelf="center" justifySelf="center" />
-            <Image src={georgiaLogo} alignSelf="center" justifySelf="center" />
-            <Image src={deloitteLogo} alignSelf="center" justifySelf="center" />
+            <Image
+              alt="logo"
+              src={zohoLogo}
+              alignSelf="center"
+              justifySelf="center"
+            />
+            <Image
+              alt="logo"
+              src={georgiaLogo}
+              alignSelf="center"
+              justifySelf="center"
+            />
+            <Image
+              alt="logo"
+              src={deloitteLogo}
+              alignSelf="center"
+              justifySelf="center"
+            />
           </SimpleGrid>
         </Flex>
         <Flex direction="column" mb={{ sm: "20px", lg: "60px" }}>
@@ -451,8 +478,8 @@ function Pricing() {
               fontWeight="normal"
               maxW={{ sm: "300px", lg: "500px" }}
             >
-              A lot of people don't appreciate the moment until it’s passed. I'm
-              not trying my hardest, and I'm not trying to do
+              A lot of people dont appreciate the moment until it’s passed. Im
+              not trying my hardest, and Im not trying to do
             </Text>
           </Flex>
         </Flex>
@@ -520,7 +547,7 @@ function Pricing() {
               >
                 It really matters and then like it really doesn’t matter. What
                 matters is the people who are sparked by it. And the people who
-                are like offended by it, it doesn’t matter. Because it's about
+                are like offended by it, it doesn’t matter. Because Its about
                 motivating the doers. Because I’m here to follow my dreams and
                 inspire other people to follow their dreams, too. We’re not
                 always in the position that we want to be at. We’re constantly
@@ -561,11 +588,11 @@ function Pricing() {
                 standing out. But the time is now to be okay to be the greatest
                 you. Would you believe in what you believe in, if you were the
                 only one who believed it? If everything I did failed - which it
-                doesn't, it actually succeeds - just the fact that I'm willing
-                to fail is an inspiration. People are so scared to lose that
-                they don't even try. Like, one thing people can't say is that
-                I'm not trying, and I'm not trying my hardest, and I'm not
-                trying to do the best way I know how.
+                doesnt, it actually succeeds - just the fact that Im willing to
+                fail is an inspiration. People are so scared to lose that they
+                dont even try. Like, one thing people cant say is that Im not
+                trying, and Im not trying my hardest, and Im not trying to do
+                the best way I know how.
               </Text>
             </AccordionPanel>
           </AccordionItem>
@@ -595,14 +622,14 @@ function Pricing() {
               >
                 I always felt like I could do anything. That’s the main thing
                 people are controlled by! Thoughts- their perception of
-                themselves! They're slowed down by their perception of
-                themselves. If you're taught you can’t do anything, you won’t do
+                themselves! Theyre slowed down by their perception of
+                themselves. If youre taught you can’t do anything, you won’t do
                 anything. I was taught I could do everything. If everything I
-                did failed - which it doesn't, it actually succeeds - just the
-                fact that I'm willing to fail is an inspiration. People are so
-                scared to lose that they don't even try. Like, one thing people
-                can't say is that I'm not trying, and I'm not trying my hardest,
-                and I'm not trying to do the best way I know how.
+                did failed - which it doesnt, it actually succeeds - just the
+                fact that Im willing to fail is an inspiration. People are so
+                scared to lose that they dont even try. Like, one thing people
+                cant say is that Im not trying, and Im not trying my hardest,
+                and Im not trying to do the best way I know how.
               </Text>
             </AccordionPanel>
           </AccordionItem>
@@ -636,8 +663,8 @@ function Pricing() {
                 what I do. That’s what I’m here for. Don’t be afraid to be wrong
                 because you can’t learn anything from a compliment. I always
                 felt like I could do anything. That’s the main thing people are
-                controlled by! Thoughts- their perception of themselves! They're
-                slowed down by their perception of themselves. If you're taught
+                controlled by! Thoughts- their perception of themselves! Theyre
+                slowed down by their perception of themselves. If youre taught
                 you can’t do anything, you won’t do anything. I was taught I
                 could do everything.
               </Text>

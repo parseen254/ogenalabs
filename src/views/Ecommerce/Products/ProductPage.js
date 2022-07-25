@@ -39,18 +39,19 @@ import {
   UnorderedList,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { BsStarFill, BsStarHalf } from "react-icons/bs";
+import React, { useState } from "react";
+
+// Custom components
+import Card from "components/Card/Card";
+import CardBody from "components/Card/CardBody";
+import CardHeader from "components/Card/CardHeader";
 // Assets
 import productPage1 from "assets/img/product-page-1.png";
 import productPage2 from "assets/img/product-page-2.png";
 import productPage3 from "assets/img/product-page-3.png";
 import productPage4 from "assets/img/product-page-4.png";
 import productPage5 from "assets/img/product-page-5.png";
-// Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
-import React, { useState } from "react";
-import { BsStarFill, BsStarHalf } from "react-icons/bs";
 
 function ProductPage() {
   const [currentImage, setCurrentImage] = useState(productPage1);
@@ -82,6 +83,7 @@ function ProductPage() {
                 mx={{ sm: "auto", lg: "0px" }}
               >
                 <Image
+                  alt="product"
                   src={currentImage}
                   w="100%"
                   h="100%"
@@ -99,6 +101,7 @@ function ProductPage() {
                   h={{ sm: "36px", md: "90px", lg: "60px" }}
                 >
                   <Image
+                    alt="product"
                     src={productPage1}
                     w="100%"
                     h="100%"
@@ -112,6 +115,7 @@ function ProductPage() {
                   h={{ sm: "36px", md: "90px", lg: "60px" }}
                 >
                   <Image
+                    alt="product"
                     src={productPage3}
                     w="100%"
                     h="100%"
@@ -125,6 +129,7 @@ function ProductPage() {
                   h={{ sm: "36px", md: "90px", lg: "60px" }}
                 >
                   <Image
+                    alt="product"
                     src={productPage4}
                     w="100%"
                     h="100%"
@@ -138,6 +143,7 @@ function ProductPage() {
                   h={{ sm: "36px", md: "90px", lg: "60px" }}
                 >
                   <Image
+                    alt="product"
                     src={productPage5}
                     w="100%"
                     h="100%"
@@ -314,6 +320,7 @@ function ProductPage() {
                     <Flex align="center">
                       <Box w="40px" h="40px" me="14px">
                         <Image
+                          alt="product"
                           src={productPage2}
                           w="100%"
                           h="100%"
@@ -383,6 +390,7 @@ function ProductPage() {
                     <Flex align="center">
                       <Box w="40px" h="40px" me="14px">
                         <Image
+                          alt="product"
                           src={productPage3}
                           w="100%"
                           h="100%"
@@ -452,6 +460,7 @@ function ProductPage() {
                     <Flex align="center">
                       <Box w="40px" h="40px" me="14px">
                         <Image
+                          alt="product"
                           src={productPage4}
                           w="100%"
                           h="100%"
@@ -521,6 +530,7 @@ function ProductPage() {
                     <Flex align="center">
                       <Box w="40px" h="40px" me="14px">
                         <Image
+                          alt="product"
                           src={productPage5}
                           w="100%"
                           h="100%"

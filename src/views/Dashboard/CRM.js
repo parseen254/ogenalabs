@@ -32,20 +32,9 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import CRMimage from "assets/img/CRM-image.png";
-import peopleImage from "assets/img/people-image.png";
-import EventCalendar from "components/Calendars/EventCalendar";
-import Card from "components/Card/Card.js";
-import CardHeader from "components/Card/CardHeader.js";
-import LineChart from "components/Charts/LineChart";
-import IconBox from "components/Icons/IconBox";
 import { DocumentIcon, RocketIcon, SettingsIcon } from "components/Icons/Icons";
-import TransactionRow from "components/Tables/TransactionRow";
-import React, { useRef } from "react";
-import { BsArrowRight } from "react-icons/bs";
 import { FaPlus, FaRegCalendarAlt } from "react-icons/fa";
-import { RiArrowDropRightLine } from "react-icons/ri";
-import { calendarDataCRM } from "variables/calendar";
+import React, { useRef } from "react";
 import {
   lineChartDataCRM1,
   lineChartDataCRM2,
@@ -53,6 +42,18 @@ import {
   lineChartOptionsCRM2,
 } from "variables/charts";
 import { revenueCRM, transactionsCRM } from "variables/general";
+
+import { BsArrowRight } from "react-icons/bs";
+import CRMimage from "assets/img/CRM-image.png";
+import Card from "components/Card/Card.js";
+import CardHeader from "components/Card/CardHeader.js";
+import EventCalendar from "components/Calendars/EventCalendar";
+import IconBox from "components/Icons/IconBox";
+import LineChart from "components/Charts/LineChart";
+import { RiArrowDropRightLine } from "react-icons/ri";
+import TransactionRow from "components/Tables/TransactionRow";
+import { calendarDataCRM } from "variables/calendar";
+import peopleImage from "assets/img/people-image.png";
 
 function CRM() {
   const textColor = useColorModeValue("gray.700", "white");
@@ -420,7 +421,7 @@ function CRM() {
                   me={{ md: "36px" }}
                   mb={{ sm: "12px", md: "0px" }}
                 >
-                  <Image src={CRMimage} w="100%" h="100%" borderRadius="15px" />
+                  <Image alt="..." src={CRMimage} w="100%" h="100%" borderRadius="15px" />
                 </Box>
 
                 <Flex
@@ -429,14 +430,13 @@ function CRM() {
                   align={{ sm: "center", md: "flex-start" }}
                 >
                   <Text
-                    fontSize="sm"
                     fontWeight="bold"
                     textAlign={{ sm: "center", md: "start" }}
                     color={secondaryColor}
                     fontSize={{ sm: "sm", md: "xs", lg: "sm" }}
                     mb={{ sm: "10px", lg: "22px" }}
                   >
-                    Today's Martina's Birthday. Wish her the best of luck!
+                    Today is Martina&apos;s Birthday. Wish her the best of luck!
                   </Text>
                   <Button
                     h={{ sm: "32px" }}

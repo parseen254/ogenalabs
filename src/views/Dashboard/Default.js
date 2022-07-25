@@ -15,6 +15,20 @@
 
 */
 
+// Custom icons
+import {
+  AdobexdLogo,
+  CartIcon,
+  DocumentIcon,
+  GlobeIcon,
+  JiraLogo,
+  RocketIcon,
+  SettingsIcon,
+  SlackLogo,
+  SpotifyLogo,
+  WalletIcon,
+} from "components/Icons/Icons.js";
+import { AiFillLike, AiOutlinePlus } from "react-icons/ai";
 // Chakra imports
 import {
   Avatar,
@@ -45,6 +59,32 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
+import {
+  FaChevronDown,
+  FaChevronUp,
+  FaCommentDots,
+  FaUser,
+} from "react-icons/fa";
+import {
+  lineChartDataDefault,
+  lineChartOptionsDefault,
+} from "variables/charts";
+import { tablesReportsData, tablesTableData } from "variables/general";
+
+import { BitcoinLogo } from "components/Icons/Icons";
+// Custom components
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
+import CardHeader from "components/Card/CardHeader.js";
+import { HSeparator } from "components/Separator/Separator";
+import IconBox from "components/Icons/IconBox";
+import { IoBulb } from "react-icons/io5";
+import { IoMdShareAlt } from "react-icons/io";
+import LineChart from "components/Charts/LineChart";
+import React from "react";
+import { RiArrowDropRightLine } from "react-icons/ri";
+import TablesReportsRow from "components/Tables/TablesReportsRow";
+import TablesTableRow from "components/Tables/TablesTableRow";
 import avatar10 from "assets/img/avatars/avatar10.png";
 import avatar2 from "assets/img/avatars/avatar2.png";
 import avatar3 from "assets/img/avatars/avatar3.png";
@@ -52,45 +92,6 @@ import avatar4 from "assets/img/avatars/avatar4.png";
 import avatar5 from "assets/img/avatars/avatar5.png";
 import handBg from "assets/img/hand-background.png";
 import teamsImage from "assets/img/teams-image.png";
-// Custom components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import LineChart from "components/Charts/LineChart";
-import IconBox from "components/Icons/IconBox";
-import { BitcoinLogo } from "components/Icons/Icons";
-// Custom icons
-import {
-  AdobexdLogo,
-  CartIcon,
-  DocumentIcon,
-  GlobeIcon,
-  JiraLogo,
-  RocketIcon,
-  SettingsIcon,
-  SlackLogo,
-  SpotifyLogo,
-  WalletIcon,
-} from "components/Icons/Icons.js";
-import { HSeparator } from "components/Separator/Separator";
-import TablesReportsRow from "components/Tables/TablesReportsRow";
-import TablesTableRow from "components/Tables/TablesTableRow";
-import React from "react";
-import { AiFillLike, AiOutlinePlus } from "react-icons/ai";
-import {
-  FaChevronDown,
-  FaChevronUp,
-  FaCommentDots,
-  FaUser,
-} from "react-icons/fa";
-import { IoMdShareAlt } from "react-icons/io";
-import { IoBulb } from "react-icons/io5";
-import { RiArrowDropRightLine } from "react-icons/ri";
-import {
-  lineChartDataDefault,
-  lineChartOptionsDefault,
-} from "variables/charts";
-import { tablesReportsData, tablesTableData } from "variables/general";
 
 export default function Default() {
   // Chakra Color Mode
@@ -122,7 +123,7 @@ export default function Default() {
                   fontWeight="bold"
                   textTransform="uppercase"
                 >
-                  Today's Money
+                  Todays Money
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize="lg" color={textColor} fontWeight="bold">
@@ -164,7 +165,7 @@ export default function Default() {
                   fontWeight="bold"
                   textTransform="uppercase"
                 >
-                  Today's Users
+                  Todays Users
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize="lg" color={textColor} fontWeight="bold">
@@ -692,6 +693,7 @@ export default function Default() {
               hire you.
             </Text>
             <Image
+              alt="..."
               src={teamsImage}
               minW={{ sm: "270px" }}
               h="auto"
@@ -848,7 +850,7 @@ export default function Default() {
                   mt="6px"
                   mb="14px"
                 >
-                  It's all about work ! Great ideas mean nothing if they aren't
+                  Its all about work ! Great ideas mean nothing if they arent
                   realised by hungry, desiring people.
                 </Text>
                 <Flex>
@@ -1256,6 +1258,7 @@ export default function Default() {
                 {tablesTableData.map((row, index, arr) => {
                   return (
                     <TablesTableRow
+                      key={index}
                       name={row.name}
                       logo={row.logo}
                       email={row.email}

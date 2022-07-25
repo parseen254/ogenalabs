@@ -15,9 +15,9 @@
 
 */
 
-/*eslint-disable*/
-import React from "react";
 import { Flex, Link, List, ListItem, Text } from "@chakra-ui/react";
+
+import React from "react";
 
 export default function Footer() {
   return (
@@ -90,16 +90,14 @@ export default function Footer() {
           }}>
           <Link
             color='gray.400'
-            href='#blog'
-            href='https://creative-tim.com/blog'>
+            href='#blog'>
             {document.documentElement.dir === "rtl" ? "مدونة" : "Blog"}
           </Link>
         </ListItem>
         <ListItem>
           <Link
             color='gray.400'
-            href='#license'
-            href='https://www.creative-tim.com/license'>
+            href='#license'>
             {document.documentElement.dir === "rtl" ? "رخصة" : "License"}
           </Link>
         </ListItem>

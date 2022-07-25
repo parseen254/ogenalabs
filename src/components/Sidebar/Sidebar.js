@@ -10,7 +10,7 @@
 */
 
 /eslint-disable/;
-import { HamburgerIcon } from "@chakra-ui/icons";
+
 // chakra imports
 import {
   Accordion,
@@ -34,8 +34,7 @@ import {
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import SidebarDocs from "./SidebarDocs";
-import IconBox from "components/Icons/IconBox";
+import { NavLink, useLocation } from "react-router-dom";
 import {
   renderThumbDark,
   renderThumbLight,
@@ -44,13 +43,16 @@ import {
   renderView,
   renderViewRTL,
 } from "components/Scrollbar/Scrollbar";
+
+import { FaCircle } from "react-icons/fa";
 import { HSeparator } from "components/Separator/Separator";
-import { SidebarContext } from "contexts/SidebarContext";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import IconBox from "components/Icons/IconBox";
 import PropTypes from "prop-types";
 import React from "react";
 import { Scrollbars } from "react-custom-scrollbars-2";
-import { FaCircle } from "react-icons/fa";
-import { NavLink, useLocation } from "react-router-dom";
+import { SidebarContext } from "contexts/SidebarContext";
+import SidebarDocs from "./SidebarDocs";
 
 // FUNCTIONS
 
@@ -395,13 +397,14 @@ function Sidebar(props) {
 
     return routes.map((prop, index) => {
       return (
-        <NavLink to={prop.layout + prop.path}>
+        <NavLink key={index} to={prop.layout + prop.path}>
           <ListItem
-            pt='5px'
+            pt="5px"
             ms={sidebarWidth === 275 ? "26px" : "12px"}
-            key={index}>
+            key={index}
+          >
             <Text
-              mb='4px'
+              mb="4px"
               color={
                 activeRoute(prop.path.toLowerCase())
                   ? activeColor
@@ -410,7 +413,8 @@ function Sidebar(props) {
               fontWeight={
                 activeRoute(prop.path.toLowerCase()) ? "bold" : "normal"
               }
-              fontSize='sm'>
+              fontSize="sm"
+            >
               {sidebarWidth === 275 ? prop.name : prop.name[0]}
             </Text>
           </ListItem>
@@ -762,8 +766,8 @@ export function SidebarResponsive(props) {
   const createAccordionLinks = (routes) => {
     return routes.map((prop, index) => {
       return (
-        <NavLink to={prop.layout + prop.path}>
-          <ListItem pt='5px' ms='26px' key={index}>
+        <NavLink key={index} to={prop.layout + prop.path}>
+          <ListItem pt="5px" ms="26px" key={index}>
             <Text
               color={
                 activeRoute(prop.path.toLowerCase())
@@ -773,7 +777,8 @@ export function SidebarResponsive(props) {
               fontWeight={
                 activeRoute(prop.path.toLowerCase()) ? "bold" : "normal"
               }
-              fontSize='sm'>
+              fontSize="sm"
+            >
               {prop.name}
             </Text>
           </ListItem>

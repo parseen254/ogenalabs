@@ -15,9 +15,8 @@
 
 */
 
-// Chakra imports
-import Board from "@asseinfo/react-kanban";
 import "@asseinfo/react-kanban/dist/styles.css";
+
 import { AddIcon, AttachmentIcon } from "@chakra-ui/icons";
 import {
   Avatar,
@@ -29,10 +28,21 @@ import {
   IconButton,
   Image,
   Input,
+  LightMode,
   Text,
   useColorModeValue,
-  LightMode,
 } from "@chakra-ui/react";
+import React, { useRef, useState } from "react";
+import {
+  kanbanRenderThumbDark,
+  kanbanRenderThumbLight,
+  kanbanRenderTrack,
+  kanbanRenderView,
+} from "components/Scrollbar/Scrollbar";
+
+// Chakra imports
+import Board from "@asseinfo/react-kanban";
+import { Scrollbars } from "react-custom-scrollbars-2";
 // Assets
 import avatar2 from "assets/img/avatars/avatar2.png";
 import avatar3 from "assets/img/avatars/avatar3.png";
@@ -40,14 +50,6 @@ import avatar4 from "assets/img/avatars/avatar4.png";
 import kanban1 from "assets/img/kanban1.png";
 import kanban2 from "assets/img/kanban2.png";
 import kanban3 from "assets/img/kanban3.png";
-import {
-  kanbanRenderThumbDark,
-  kanbanRenderThumbLight,
-  kanbanRenderTrack,
-  kanbanRenderView,
-} from "components/Scrollbar/Scrollbar";
-import React, { useRef, useState } from "react";
-import { Scrollbars } from "react-custom-scrollbars-2";
 
 function Kanban() {
   // Chakra color mode
@@ -259,6 +261,7 @@ function Kanban() {
               >
                 {image ? (
                   <Image
+                    alt="..."
                     borderRadius="15px"
                     w="420px"
                     h="284px"
@@ -271,7 +274,6 @@ function Kanban() {
                     fontSize="10px"
                     fontWeight="bold"
                     variant="solid"
-                    colorScheme="green"
                     mb="16px"
                     h="28px"
                     w="94px"

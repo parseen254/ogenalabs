@@ -15,7 +15,6 @@
 
 */
 
-import React, { useReducer, useRef, useState } from "react";
 // Chakra imports
 import {
   Avatar,
@@ -26,6 +25,7 @@ import {
   FormLabel,
   Icon,
   Input,
+  LightMode,
   NumberDecrementStepper,
   NumberIncrementStepper,
   NumberInput,
@@ -44,18 +44,19 @@ import {
   Text,
   useColorMode,
   useColorModeValue,
-  LightMode,
 } from "@chakra-ui/react";
-// Assets
-import avatar5 from "assets/img/avatars/avatar5.png";
-import { BsCircleFill } from "react-icons/bs";
 import { FaCube, FaPenFancy } from "react-icons/fa";
-import { IoDocumentsSharp } from "react-icons/io5";
+import React, { useReducer, useRef, useState } from "react";
+
+import { BsCircleFill } from "react-icons/bs";
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 import CardHeader from "components/Card/CardHeader";
 import Editor from "components/Editor/Editor";
+import { IoDocumentsSharp } from "react-icons/io5";
+// Assets
+import avatar5 from "assets/img/avatars/avatar5.png";
 import { useDropzone } from "react-dropzone";
 
 const reducer = (state, action) => {
@@ -811,11 +812,10 @@ function NewProduct() {
                               h="25px"
                               mb="6px"
                               me="6px"
-                              key={skill.id}
+                              key={index}
                               borderRadius="12px"
                               variant="solid"
                               bg="gray.700"
-                              key={index}
                             >
                               <TagLabel w="100%">{skill.name}</TagLabel>
                               <TagCloseButton

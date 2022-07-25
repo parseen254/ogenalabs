@@ -15,8 +15,6 @@
 
 */
 
-import React from "react";
-
 // Chakra imports
 import {
   Avatar,
@@ -36,12 +34,6 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-// Assets
-import avatar4 from "assets/img/avatars/avatar4.png";
-import basicDark from "assets/img/BgMusicCard.png";
-import basicBlue from "assets/img/basic-auth.png";
-import { BsCircleFill } from "react-icons/bs";
-import { IoEllipsisHorizontalSharp } from "react-icons/io5";
 import {
   CartIcon,
   DocumentIcon,
@@ -49,19 +41,27 @@ import {
   HomeIcon,
   WalletIcon,
 } from "components/Icons/Icons";
-// Custom components
-import Card from "components/Card/Card";
-import CardHeader from "components/Card/CardHeader";
-import DonutChart from "components/Charts/DonutChart";
-import LineChart from "components/Charts/LineChart";
-import IconBox from "components/Icons/IconBox";
-import { HSeparator } from "components/Separator/Separator";
 import {
   donutChartDataGeneral,
   donutChartOptionsGeneral,
   lineChartDataGeneral,
   lineChartOptionsGeneral,
 } from "variables/charts";
+
+import { BsCircleFill } from "react-icons/bs";
+// Custom components
+import Card from "components/Card/Card";
+import CardHeader from "components/Card/CardHeader";
+import DonutChart from "components/Charts/DonutChart";
+import { HSeparator } from "components/Separator/Separator";
+import IconBox from "components/Icons/IconBox";
+import { IoEllipsisHorizontalSharp } from "react-icons/io5";
+import LineChart from "components/Charts/LineChart";
+import React from "react";
+// Assets
+import avatar4 from "assets/img/avatars/avatar4.png";
+import basicBlue from "assets/img/basic-auth.png";
+import basicDark from "assets/img/BgMusicCard.png";
 
 function General() {
   const { colorMode } = useColorMode();
@@ -148,7 +148,6 @@ function General() {
               justify="center"
               w="100%"
               h="100%"
-              h="100%"
             >
               <Stat me="auto">
                 <StatLabel
@@ -157,7 +156,7 @@ function General() {
                   fontWeight="bold"
                   pb=".1rem"
                 >
-                  Today's Money
+                  Todays Money
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize="lg" color={textColor}>
@@ -235,7 +234,7 @@ function General() {
                   fontWeight="bold"
                   pb=".1rem"
                 >
-                  Today's Users
+                  Todays Users
                 </StatLabel>
                 <Flex>
                   <StatNumber fontSize="lg" color={textColor}>
@@ -390,7 +389,7 @@ function General() {
                 minWidth="3px"
                 h="100%"
               />
-              <Flex direction="column" p="12px 22px" w="100%" w="100%">
+              <Flex direction="column" p="12px 22px" w="100%">
                 <Flex justify="space-between" mb="18px">
                   <Flex align="center">
                     <Checkbox

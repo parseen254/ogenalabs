@@ -1,44 +1,41 @@
-import React from "react";
 import {
-  Flex,
-  Text,
-  Stack,
-  Grid,
-  Image,
-  Button,
-  Icon,
-  Input,
-  Box,
-  RangeSlider,
-  RangeSliderTrack,
-  RangeSliderFilledTrack,
-  RangeSliderThumb,
-  useColorModeValue,
-} from "@chakra-ui/react";
-
-import Card from "components/Card/Card";
-import IconBox from "components/Icons/IconBox";
-import { HSeparator, VSeparator } from "components/Separator/Separator";
-
-import Map from "components/Map/Map";
-
-import bgAutomotiveCard from "assets/img/automotive-background-card.png";
-import tesla from "assets/img/tesla.png";
-import drake from "assets/img/drake.png";
-
-import { FaMap, FaPlay, FaPowerOff } from "react-icons/fa";
-import {
-  AiFillCar,
-  AiOutlineSearch,
   AiFillBackward,
+  AiFillCar,
   AiFillForward,
+  AiOutlineSearch,
   AiOutlineUnorderedList,
 } from "react-icons/ai";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Icon,
+  Image,
+  Input,
+  RangeSlider,
+  RangeSliderFilledTrack,
+  RangeSliderThumb,
+  RangeSliderTrack,
+  Stack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { FaMap, FaPlay, FaPowerOff } from "react-icons/fa";
+import { HSeparator, VSeparator } from "components/Separator/Separator";
+import { IoChatbubbleEllipsesSharp, IoHeadsetSharp } from "react-icons/io5";
+import { IoIosMusicalNotes, IoIosSpeedometer } from "react-icons/io";
+
 import { BsBatteryCharging } from "react-icons/bs";
-import { IoIosSpeedometer, IoIosMusicalNotes } from "react-icons/io";
-import { IoHeadsetSharp, IoChatbubbleEllipsesSharp } from "react-icons/io5";
+import Card from "components/Card/Card";
 import { CgAppleWatch } from "react-icons/cg";
+import IconBox from "components/Icons/IconBox";
+import Map from "components/Map/Map";
+import React from "react";
 import { SpotifyLogo } from "components/Icons/Icons";
+import bgAutomotiveCard from "assets/img/automotive-background-card.png";
+import drake from "assets/img/drake.png";
+import tesla from "assets/img/tesla.png";
 
 const Automotive = () => {
 
@@ -107,6 +104,7 @@ const Automotive = () => {
             my={{ sm: "10px", lg: "0px" }}
           >
             <Image
+              alt="..."
               src={tesla}
               minW={{ md: "300px", lg: "450px" }}
               mt={{ lg: "-170px" }}
@@ -170,7 +168,7 @@ const Automotive = () => {
         >
           <Flex direction="column" me="auto">
             <Text fontSize="xs" color="white" mb="3px">
-              Today's Trip
+              Todays Trip
             </Text>
             <Text color="#fff" fontSize="lg" fontWeight="bold">
               143 KM
@@ -238,10 +236,7 @@ const Automotive = () => {
           </IconBox>
         </Flex>
       </Grid>
-      <Card
-        bg={bgCard}
-        px="0px"
-      >
+      <Card bg={bgCard} px="0px">
         <Flex
           direction={{ sm: "column", md: "row" }}
           justify="space-between"
@@ -282,7 +277,7 @@ const Automotive = () => {
           mb="20px"
           px="22px"
         >
-          <Flex align="center" align="center">
+          <Flex align="center" >
             <Text color="white" fontSize="2xl" fontWeight="bold" me="10px">
               11:43
             </Text>
@@ -295,7 +290,7 @@ const Automotive = () => {
             bg="white"
             display={{ sm: "none", md: "block" }}
           />
-          <Flex align="center" align="center">
+          <Flex align="center" >
             <Text color="white" fontSize="2xl" fontWeight="bold" me="10px">
               2.4{" "}
               <Text
@@ -317,7 +312,7 @@ const Automotive = () => {
             bg="white"
             display={{ sm: "none", md: "block" }}
           />
-          <Flex align="center" align="center">
+          <Flex align="center" >
             <Text color="white" fontSize="2xl" fontWeight="bold" me="10px">
               6.7{" "}
               <Text
@@ -345,7 +340,7 @@ const Automotive = () => {
         >
           <Stack direction="row" spacing="15px" align="center">
             <Box position="relative">
-              <Image src={drake} w="70px" h="70px" borderRadius="50%" />
+              <Image alt="..." src={drake} w="70px" h="70px" borderRadius="50%" />
               <SpotifyLogo
                 w="25px"
                 h="25px"
@@ -398,7 +393,7 @@ const Automotive = () => {
                 Volume
               </Text>
               <RangeSlider
-                aria-label={["max"]}
+                aria-label={"max"}
                 colorScheme="blue"
                 defaultValue={[30]}
                 borderRadius="20px"

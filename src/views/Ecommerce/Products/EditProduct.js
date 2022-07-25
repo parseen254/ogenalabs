@@ -15,8 +15,6 @@
 
 */
 
-import React, { useState } from "react";
-
 // Chakra imports
 import {
   Box,
@@ -40,13 +38,15 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-// Assets
-import productImage1 from "assets/img/product-page-1.png";
+import React, { useState } from "react";
+
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 import CardHeader from "components/Card/CardHeader";
 import Editor from "components/Editor/Editor";
+// Assets
+import productImage1 from "assets/img/product-page-1.png";
 
 function EditProduct() {
   const [skills, setSkills] = useState([
@@ -80,68 +80,74 @@ function EditProduct() {
   const textColor = useColorModeValue("gray.700", "white");
 
   return (
-    <Flex direction='column' pt={{ sm: "125px", lg: "75px" }}>
+    <Flex direction="column" pt={{ sm: "125px", lg: "75px" }}>
       <Flex
         direction={{ sm: "column", lg: "row" }}
-        justify='space-between'
+        justify="space-between"
         align={{ lg: "center" }}
-        w='100%'
-        mb={{ sm: "24px", lg: "55px" }}>
-        <Flex direction='column'>
+        w="100%"
+        mb={{ sm: "24px", lg: "55px" }}
+      >
+        <Flex direction="column">
           <Text
-            color='white'
-            ms='12px'
+            color="white"
+            ms="12px"
             fontSize={{ sm: "xl", md: "2xl" }}
-            fontWeight='bold'
-            mb='10px'>
+            fontWeight="bold"
+            mb="10px"
+          >
             Make the changes below
           </Text>
           <Text
-            fontSize='sm'
-            color='white'
-            ms='12px'
-            fontWeight='normal'
-            mb={{ sm: "16px", lg: "0px" }}>
+            fontSize="sm"
+            color="white"
+            ms="12px"
+            fontWeight="normal"
+            mb={{ sm: "16px", lg: "0px" }}
+          >
             We’re constantly trying to express ourselves and actualize our
             dreams. If you have the opportunity to play.
           </Text>
         </Flex>
       </Flex>
-      <Grid templateColumns={{ sm: "1fr", lg: "1fr 1.7fr" }} gap='24px'>
-        <Stack direction='column' spacing='24px'>
+      <Grid templateColumns={{ sm: "1fr", lg: "1fr 1.7fr" }} gap="24px">
+        <Stack direction="column" spacing="24px">
           <Card>
-            <CardHeader mb='42px'>
-              <Text color={textColor} fontSize='lg' fontWeight='bold'>
+            <CardHeader mb="42px">
+              <Text color={textColor} fontSize="lg" fontWeight="bold">
                 Product Image
               </Text>
             </CardHeader>
             <CardBody>
-              <Flex direction='column' w='100%'>
+              <Flex direction="column" w="100%">
                 <Box
                   w={{ sm: "280px", md: "670px", lg: "600px" }}
                   h={{ sm: "185px", md: "450px", lg: "400px" }}
                   maxW={{ sm: "280px", md: "670px", lg: "600px" }}
                   maxH={{ sm: "185px", md: "450px", lg: "400px" }}
-                  mb='24px'>
-                  <Image src={productImage1} w='100%' h='100%' />
+                  mb="24px"
+                >
+                  <Image alt="product" src={productImage1} w="100%" h="100%" />
                 </Box>
-                <Flex mt='40px'>
+                <Flex mt="40px">
                   <Button
-                    variant='no-effects'
-                    bg='gray.700'
+                    variant="no-effects"
+                    bg="gray.700"
                     w={{ sm: "75px", md: "100px" }}
-                    h='35px'
-                    me='12px'>
-                    <Text fontSize='xs' color='#fff' fontWeight='bold'>
+                    h="35px"
+                    me="12px"
+                  >
+                    <Text fontSize="xs" color="#fff" fontWeight="bold">
                       EDIT
                     </Text>
                   </Button>
                   <Button
-                    variant='no-effects'
-                    bg='gray.100'
+                    variant="no-effects"
+                    bg="gray.100"
                     w={{ sm: "75px", md: "100px" }}
-                    h='35px'>
-                    <Text fontSize='xs' color='gray.700' fontWeight='bold'>
+                    h="35px"
+                  >
+                    <Text fontSize="xs" color="gray.700" fontWeight="bold">
                       REMOVE
                     </Text>
                   </Button>
@@ -150,79 +156,80 @@ function EditProduct() {
             </CardBody>
           </Card>
           <Card>
-            <CardHeader mb='32px'>
-              <Text fontSize='lg' color={textColor} fontWeight='bold'>
+            <CardHeader mb="32px">
+              <Text fontSize="lg" color={textColor} fontWeight="bold">
                 Socials
               </Text>
             </CardHeader>
             <CardBody>
-              <Stack direction='column' spacing='20px' w='100%'>
+              <Stack direction="column" spacing="20px" w="100%">
                 <FormControl>
-                  <FormLabel fontSize='xs' fontWeight='bold' mb='10px'>
+                  <FormLabel fontSize="xs" fontWeight="bold" mb="10px">
                     Shopify Handle
                   </FormLabel>
-                  <Input variant='main' placeholder='@Argon' fontSize='xs' />
+                  <Input variant="main" placeholder="@Argon" fontSize="xs" />
                 </FormControl>
                 <FormControl>
-                  <FormLabel fontSize='xs' fontWeight='bold' mb='10px'>
+                  <FormLabel fontSize="xs" fontWeight="bold" mb="10px">
                     Facebook Account
                   </FormLabel>
-                  <Input variant='main' placeholder='https://' fontSize='xs' />
+                  <Input variant="main" placeholder="https://" fontSize="xs" />
                 </FormControl>
                 <FormControl>
-                  <FormLabel fontSize='xs' fontWeight='bold' mb='10px'>
+                  <FormLabel fontSize="xs" fontWeight="bold" mb="10px">
                     Instagram Account
                   </FormLabel>
-                  <Input variant='main' placeholder='https://' fontSize='xs' />
+                  <Input variant="main" placeholder="https://" fontSize="xs" />
                 </FormControl>
               </Stack>
             </CardBody>
           </Card>
         </Stack>
-        <Stack direction='column' spacing='24px'>
+        <Stack direction="column" spacing="24px">
           <Card>
-            <CardHeader mb='22px'>
-              <Text color={textColor} fontSize='lg' fontWeight='bold'>
+            <CardHeader mb="22px">
+              <Text color={textColor} fontSize="lg" fontWeight="bold">
                 Product Information
               </Text>
             </CardHeader>
             <CardBody>
-              <Stack direction='column' spacing='20px' w='100%'>
-                <Stack direction={{ sm: "column", md: "row" }} spacing='30px'>
+              <Stack direction="column" spacing="20px" w="100%">
+                <Stack direction={{ sm: "column", md: "row" }} spacing="30px">
                   <FormControl>
-                    <FormLabel fontSize='xs' fontWeight='bold' mb='10px'>
+                    <FormLabel fontSize="xs" fontWeight="bold" mb="10px">
                       Product Name
                     </FormLabel>
                     <Input
-                      variant='main'
-                      placeholder='eg. Modern Luxury Sofa'
-                      fontSize='xs'
+                      variant="main"
+                      placeholder="eg. Modern Luxury Sofa"
+                      fontSize="xs"
                     />
                   </FormControl>
                   <FormControl>
-                    <FormLabel fontSize='xs' fontWeight='bold' mb='10px'>
+                    <FormLabel fontSize="xs" fontWeight="bold" mb="10px">
                       Weight
                     </FormLabel>
-                    <Input variant='main' placeholder='eg. 42' fontSize='xs' />
+                    <Input variant="main" placeholder="eg. 42" fontSize="xs" />
                   </FormControl>
                 </Stack>
-                <Stack direction={{ sm: "column", lg: "row" }} spacing='30px'>
+                <Stack direction={{ sm: "column", lg: "row" }} spacing="30px">
                   <FormControl>
-                    <FormLabel fontSize='xs' fontWeight='bold' mb='10px'>
+                    <FormLabel fontSize="xs" fontWeight="bold" mb="10px">
                       Description
                     </FormLabel>
                     <Editor />
                   </FormControl>
-                  <Stack direction='column' spacing='20px' w='100%'>
+                  <Stack direction="column" spacing="20px" w="100%">
                     <FormControl>
-                      <FormLabel fontSize='xs' fontWeight='bold' mb='10px'>
+                      <FormLabel fontSize="xs" fontWeight="bold" mb="10px">
                         Category
                       </FormLabel>
                       <Select
-                        variant='main'
-                        fontSize='xs'
-                        placeholder='Furniture'
-                        color='gray.400'>
+                        variant="main"
+                        fontSize="xs"
+                        placeholder="Furniture"
+                        color="gray.400"
+                      >
                         <option>Electronics</option>
                         <option>Clothing</option>
                         <option>Real Estate</option>
@@ -230,14 +237,15 @@ function EditProduct() {
                       </Select>
                     </FormControl>
                     <FormControl>
-                      <FormLabel fontSize='xs' fontWeight='bold' mb='10px'>
+                      <FormLabel fontSize="xs" fontWeight="bold" mb="10px">
                         Color
                       </FormLabel>
                       <Select
-                        variant='main'
-                        fontSize='xs'
-                        placeholder='Green'
-                        color='gray.400'>
+                        variant="main"
+                        fontSize="xs"
+                        placeholder="Green"
+                        color="gray.400"
+                      >
                         <option>Red</option>
                         <option>Blue</option>
                         <option>Black</option>
@@ -248,28 +256,29 @@ function EditProduct() {
                     </FormControl>
                   </Stack>
                 </Stack>
-                <Stack direction={{ sm: "column", md: "row" }} spacing='30px'>
+                <Stack direction={{ sm: "column", md: "row" }} spacing="30px">
                   <FormControl>
-                    <FormLabel fontSize='xs' fontWeight='bold' mb='10px'>
+                    <FormLabel fontSize="xs" fontWeight="bold" mb="10px">
                       Collection
                     </FormLabel>
                     <Input
-                      variant='main'
-                      placeholder='eg. Summer'
-                      fontSize='xs'
+                      variant="main"
+                      placeholder="eg. Summer"
+                      fontSize="xs"
                     />
                   </FormControl>
                   <FormControl>
-                    <FormLabel fontSize='xs' fontWeight='bold' mb='10px'>
+                    <FormLabel fontSize="xs" fontWeight="bold" mb="10px">
                       Quantity
                     </FormLabel>
                     <NumberInput
-                      variant='main'
+                      variant="main"
                       defaultValue={1}
                       min={1}
                       max={20}
-                      color='gray.400'
-                      fontSize='xs'>
+                      color="gray.400"
+                      fontSize="xs"
+                    >
                       <NumberInputField />
                       <NumberInputStepper>
                         <NumberIncrementStepper />
@@ -282,33 +291,34 @@ function EditProduct() {
             </CardBody>
           </Card>
           <Card>
-            <CardHeader mb='32px'>
-              <Text fontSize='lg' color={textColor} fontWeight='bold'>
+            <CardHeader mb="32px">
+              <Text fontSize="lg" color={textColor} fontWeight="bold">
                 Pricing
               </Text>
             </CardHeader>
             <CardBody>
-              <Stack direction='column' spacing='20px' w='100%'>
-                <Stack direction='row' spacing='24px'>
+              <Stack direction="column" spacing="20px" w="100%">
+                <Stack direction="row" spacing="24px">
                   <FormControl>
-                    <FormLabel fontSize='xs' fontWeight='bold' mb='10px'>
+                    <FormLabel fontSize="xs" fontWeight="bold" mb="10px">
                       Price
                     </FormLabel>
                     <Input
-                      variant='main'
-                      placeholder='eg. $99.99'
-                      fontSize='xs'
+                      variant="main"
+                      placeholder="eg. $99.99"
+                      fontSize="xs"
                     />
                   </FormControl>
                   <FormControl>
-                    <FormLabel fontSize='xs' fontWeight='bold' mb='10px'>
+                    <FormLabel fontSize="xs" fontWeight="bold" mb="10px">
                       Currency
                     </FormLabel>
                     <Select
-                      variant='main'
-                      fontSize='xs'
-                      placeholder='USD'
-                      color='gray.400'>
+                      variant="main"
+                      fontSize="xs"
+                      placeholder="USD"
+                      color="gray.400"
+                    >
                       <option>EUR</option>
                       <option>CNY</option>
                       <option>RON</option>
@@ -318,46 +328,47 @@ function EditProduct() {
                     </Select>
                   </FormControl>
                   <FormControl>
-                    <FormLabel fontSize='xs' fontWeight='bold' mb='10px'>
+                    <FormLabel fontSize="xs" fontWeight="bold" mb="10px">
                       SKU
                     </FormLabel>
                     <Input
-                      variant='main'
-                      placeholder='71283476591'
-                      fontSize='xs'
+                      variant="main"
+                      placeholder="71283476591"
+                      fontSize="xs"
                     />
                   </FormControl>
                 </Stack>
                 <FormControl>
-                  <FormLabel fontWeight='bold' fontSize='xs' mb='10px'>
+                  <FormLabel fontWeight="bold" fontSize="xs" mb="10px">
                     Tags
                   </FormLabel>
                   <Flex
-                    direction='row'
-                    p='12px'
-                    wrap='wrap'
+                    direction="row"
+                    p="12px"
+                    wrap="wrap"
                     bg={useColorModeValue("none", "navy.900")}
                     border={useColorModeValue("1px solid #E2E8F0", "none")}
-                    borderRadius='8px'
+                    borderRadius="8px"
                     _focus={{ borderColor: "teal.300" }}
-                    minH='40px'
-                    cursor='text'>
+                    minH="40px"
+                    cursor="text"
+                  >
                     {skills.map((skill, index) => {
                       return (
                         <Tag
-                          fontSize='xs'
-                          h='25px'
-                          mb='6px'
-                          me='6px'
-                          key={skill.id}
-                          borderRadius='12px'
-                          variant='solid'
-                          bg='gray.700'
-                          key={index}>
-                          <TagLabel w='100%'>{skill.name}</TagLabel>
+                          fontSize="xs"
+                          h="25px"
+                          mb="6px"
+                          me="6px"
+                          borderRadius="12px"
+                          variant="solid"
+                          bg="gray.700"
+                          key={index}
+                        >
+                          <TagLabel w="100%">{skill.name}</TagLabel>
                           <TagCloseButton
-                            justifySelf='flex-end'
-                            color='white'
+                            justifySelf="flex-end"
+                            color="white"
                             onClick={() =>
                               setSkills([
                                 ...skills.filter(
@@ -370,12 +381,12 @@ function EditProduct() {
                       );
                     })}
                     <Input
-                      variant='main'
-                      border='none'
-                      _focus='none'
-                      p='0px'
+                      variant="main"
+                      border="none"
+                      _focus="none"
+                      p="0px"
                       onKeyDown={(e) => keyPress(e)}
-                      fontSize='xs'
+                      fontSize="xs"
                     />
                   </Flex>
                 </FormControl>
@@ -384,22 +395,23 @@ function EditProduct() {
           </Card>
           <Card>
             <CardHeader>
-              <Text color={textColor} fontSize='lg' fontWeight='bold' mb='22px'>
+              <Text color={textColor} fontSize="lg" fontWeight="bold" mb="22px">
                 Product Images
               </Text>
             </CardHeader>
             <CardBody>
               <Flex
-                align='center'
-                justify='center'
+                align="center"
+                justify="center"
                 bg={useColorModeValue("none", "navy.900")}
                 border={useColorModeValue("1px dashed #E2E8F0", "none")}
-                borderRadius='15px'
-                w='100%'
-                minH='130px'
-                cursor='pointer'>
-                <Button variant='no-effects'>
-                  <Text color='gray.400' fontWeight='normal'>
+                borderRadius="15px"
+                w="100%"
+                minH="130px"
+                cursor="pointer"
+              >
+                <Button variant="no-effects">
+                  <Text color="gray.400" fontWeight="normal">
                     Drop files here to upload
                   </Text>
                 </Button>

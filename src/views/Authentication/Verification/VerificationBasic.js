@@ -18,19 +18,20 @@
 // Chakra imports
 import {
   Button,
-  Link,
   Flex,
   FormControl,
-  Text,
   Icon,
+  Link,
+  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+
+import AuthBasic from "layouts/AuthBasic";
 // Assets
 import BasicImage from "assets/img/BasicImage.png";
-import React from "react";
-import AuthBasic from "layouts/AuthBasic";
-import { PinInputLight } from "components/PinInput/PinInput";
 import { IoIosRocket } from "react-icons/io";
+import { PinInputLight } from "components/PinInput/PinInput";
+import React from "react";
 
 function LockBasic() {
   // Chakra color mode
@@ -102,7 +103,7 @@ function LockBasic() {
             </Button>
           </FormControl>
           <Text color="gray.400" fontWeight="400" textAlign="center">
-            Haven't received it?{" "}
+            havent received it?{" "}
             <Link color={textColor} as="span" fontWeight="700">
               Resend a new code.
             </Link>

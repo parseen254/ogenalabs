@@ -15,6 +15,12 @@
 
 */
 
+import {
+  AtlassianLogo,
+  InvisionLogo,
+  SlackLogo,
+  SpotifyLogo,
+} from "components/Icons/Icons";
 // Chakra imports
 import {
   Avatar,
@@ -43,28 +49,23 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-import avatar4 from "assets/img/avatars/avatar4.png";
+import { BsArrowRight, BsCircleFill, BsToggleOn } from "react-icons/bs";
+import { Element, Link } from "react-scroll";
+import { FaCube, FaUser } from "react-icons/fa";
+import { IoIosArrowUp, IoIosRocket, IoMdNotifications } from "react-icons/io";
+import React, { useState } from "react";
+
+import { AiFillDelete } from "react-icons/ai";
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 import CardHeader from "components/Card/CardHeader";
-import {
-  AtlassianLogo,
-  InvisionLogo,
-  SlackLogo,
-  SpotifyLogo,
-} from "components/Icons/Icons";
-import { HSeparator } from "components/Separator/Separator";
-import React, { useState } from "react";
-import { AiFillDelete } from "react-icons/ai";
-import { BsArrowRight, BsCircleFill, BsToggleOn } from "react-icons/bs";
-import { FaCube, FaUser } from "react-icons/fa";
 import { GiSmartphone } from "react-icons/gi";
-import { IoIosArrowUp, IoIosRocket, IoMdNotifications } from "react-icons/io";
+import { HSeparator } from "components/Separator/Separator";
 import { IoDocumentText } from "react-icons/io5";
 import { MdPowerSettingsNew } from "react-icons/md";
 import { RiComputerLine } from "react-icons/ri";
-import { Element, Link } from "react-scroll";
+import avatar4 from "assets/img/avatars/avatar4.png";
 
 function Settings() {
   const bgHoverLinks = useColorModeValue("gray.100", "navy.900");
@@ -547,7 +548,7 @@ function Settings() {
                 >
                   <FormControl w="40%">
                     <FormLabel fontWeight="semibold" fontSize="xs" mb="10px">
-                      I'm
+                      Im
                     </FormLabel>
                     <Select
                       variant="main"
@@ -569,12 +570,7 @@ function Settings() {
                       <FormLabel fontWeight="semibold" fontSize="xs" mb="10px">
                         Birth Date
                       </FormLabel>
-                      <Select
-                        variant="main"
-                        color="gray.400"
-                        fontSize="sm"
-                        fontSize="xs"
-                      >
+                      <Select variant="main" color="gray.400" fontSize="sm">
                         <option value="option1">January</option>
                         <option value="option2">February</option>
                         <option value="option3">March</option>
@@ -712,11 +708,10 @@ function Settings() {
                             h="25px"
                             mb="6px"
                             me="6px"
-                            key={skill.id}
+                            key={index}
                             borderRadius="12px"
                             variant="solid"
                             bg={bgSkill}
-                            key={index}
                           >
                             <TagLabel w="100%">{skill.name}</TagLabel>
                             <TagCloseButton
@@ -1065,9 +1060,9 @@ function Settings() {
                   </Flex>
                   <Stack direction="column" w="100%" spacing="18px" ps="50px">
                     <Text color="gray.400" fontWeight="normal" fontSize="sm">
-                      You haven't added your Slack yet or you aren't authorized.
+                      You havent added your Slack yet or you arent authorized.
                       Please add our Slack Bot to your account by clicking on
-                      here. When you've added the bot, send your verification
+                      here. When youve added the bot, send your verification
                       code that you have received.
                     </Text>
                     <Flex
@@ -1108,7 +1103,6 @@ function Settings() {
                       bg={bgVerificationCard}
                       borderRadius="12px"
                       w="100%"
-                      align="center"
                       p="10px 12px"
                     >
                       <Text

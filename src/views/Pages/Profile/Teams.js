@@ -1,21 +1,4 @@
-/*!
-
-=========================================================
-* Argon Dashboard Chakra PRO - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-chakra-pro
-* Copyright 2022 Creative Tim (https://www.creative-tim.com/)
-
-* Designed and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React, { useReducer } from "react";
-
+import { AiFillLike, AiOutlinePlus } from "react-icons/ai";
 import {
   Avatar,
   AvatarGroup,
@@ -38,6 +21,33 @@ import {
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
+import { FaCommentDots, FaCube, FaPenFancy, FaPlus } from "react-icons/fa";
+import { InvisionLogo, SlackLogo } from "components/Icons/Icons";
+import { IoDocumentsSharp, IoEllipsisVerticalSharp } from "react-icons/io5";
+import { IoIosStar, IoMdShareAlt, IoMdStarHalf } from "react-icons/io";
+/*!
+
+=========================================================
+* Argon Dashboard Chakra PRO - v1.0.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard-chakra-pro
+* Copyright 2022 Creative Tim (https://www.creative-tim.com/)
+
+* Designed and Coded by Simmmple & Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+import React, { useReducer } from "react";
+
+// Custom components
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
+import CardHeader from "components/Card/CardHeader.js";
+import { HSeparator } from "components/Separator/Separator.js";
 // Assets
 import avatar1 from "assets/img/avatars/avatar1.png";
 import avatar10 from "assets/img/avatars/avatar10.png";
@@ -49,16 +59,6 @@ import avatar7 from "assets/img/avatars/avatar7.png";
 import avatar8 from "assets/img/avatars/avatar8.png";
 import avatar9 from "assets/img/avatars/avatar9.png";
 import teamsImage from "assets/img/teams-image.png";
-import { AiFillLike, AiOutlinePlus } from "react-icons/ai";
-import { FaCommentDots, FaCube, FaPenFancy, FaPlus } from "react-icons/fa";
-import { IoIosStar, IoMdShareAlt, IoMdStarHalf } from "react-icons/io";
-import { IoDocumentsSharp, IoEllipsisVerticalSharp } from "react-icons/io5";
-// Custom components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import { InvisionLogo, SlackLogo } from "components/Icons/Icons";
-import { HSeparator } from "components/Separator/Separator.js";
 
 const reducer = (state, action) => {
   if (action.type === "SWITCH_ACTIVE") {
@@ -527,6 +527,7 @@ function Teams() {
                 hire you.
               </Text>
               <Image
+                alt="Teams Image"
                 src={teamsImage}
                 minW={{ sm: "270px" }}
                 h="auto"
@@ -683,8 +684,8 @@ function Teams() {
                     mt="6px"
                     mb="14px"
                   >
-                    It's all about work ! Great ideas mean nothing if they
-                    aren't realised by hungry, desiring people.
+                    Its all about work ! Great ideas mean nothing if they arent
+                    realised by hungry, desiring people.
                   </Text>
                   <Flex>
                     <Flex align="center" color="gray.500" me="21px">
@@ -823,7 +824,7 @@ function Teams() {
                   fontSize="md"
                   mb="20px"
                 >
-                  Because it's about motivating the doers. Because I’m here to
+                  Because Its about motivating the doers. Because I’m here to
                   follow my dreams and inspire other people to follow their
                   dreams, too.
                 </Text>

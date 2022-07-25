@@ -19,18 +19,19 @@
 import {
   Button,
   Flex,
-  Link,
-  Icon,
   FormControl,
+  Icon,
+  Link,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+
+import AuthCover from "layouts/AuthCover";
+import CoverImage from "assets/img/CoverImage.png";
+import { IoIosRocket } from "react-icons/io";
 // Assets
 import { PinInputLight } from "components/PinInput/PinInput";
-import { IoIosRocket } from "react-icons/io";
-import CoverImage from "assets/img/CoverImage.png";
 import React from "react";
-import AuthCover from "layouts/AuthCover";
 
 function LockCover() {
   // Chakra color mode
@@ -91,7 +92,7 @@ function LockCover() {
           </Button>
         </FormControl>
         <Text color="gray.400" fontWeight="400" textAlign="center">
-          Haven't received it?{" "}
+          havent received it?{" "}
           <Link color={textColor} as="span" fontWeight="700">
             Resend a new code.
           </Link>

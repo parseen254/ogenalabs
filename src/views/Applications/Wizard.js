@@ -36,18 +36,19 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import avatar4 from "assets/img/avatars/avatar4.png";
+import React, { useRef, useState } from "react";
+
+import { AiFillSetting } from "react-icons/ai";
+import { BsCircleFill } from "react-icons/bs";
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 import CardHeader from "components/Card/CardHeader";
-import IconBox from "components/Icons/IconBox";
-import { RocketIcon } from "components/Icons/Icons";
-import React, { useRef, useState } from "react";
-import { AiFillSetting } from "react-icons/ai";
-import { BsCircleFill } from "react-icons/bs";
 import { FaCube } from "react-icons/fa";
+import IconBox from "components/Icons/IconBox";
 import { MdModeEdit } from "react-icons/md";
+import { RocketIcon } from "components/Icons/Icons";
+import avatar4 from "assets/img/avatars/avatar4.png";
 
 function Wizard() {
   const textColor = useColorModeValue("gray.700", "white");
@@ -258,11 +259,11 @@ function Wizard() {
                     fontWeight="bold"
                     mb="4px"
                   >
-                    Let's start with the basic information
+                    Lets start with the basic information
                   </Text>
                   <Text color="gray.400" fontWeight="normal" fontSize="sm">
                     Let us know your name and email address. Use an address you
-                    don't mind other users contacting you at
+                    dont mind other users contacting you at
                   </Text>
                 </Flex>
               </CardHeader>

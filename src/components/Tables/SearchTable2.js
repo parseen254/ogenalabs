@@ -38,12 +38,10 @@ import {
   Tr,
   useColorModeValue,
 } from "@chakra-ui/react";
-import React, { useMemo } from "react";
-import { SearchBar } from "components/Navbars/SearchBar/SearchBar";
-import { MdReplay, MdCheck } from "react-icons/md";
-import { IoMdClose } from "react-icons/io";
 import { FaCheckCircle, FaTimesCircle, FaUndoAlt } from "react-icons/fa";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import { MdCheck, MdReplay } from "react-icons/md";
+import React, { useMemo } from "react";
 import {
   TiArrowSortedDown,
   TiArrowSortedUp,
@@ -55,6 +53,9 @@ import {
   useSortBy,
   useTable,
 } from "react-table";
+
+import { IoMdClose } from "react-icons/io";
+import { SearchBar } from "components/Navbars/SearchBar/SearchBar";
 
 function SearchTable2(props) {
   const { columnsData, tableData } = props;
@@ -251,7 +252,6 @@ function SearchTable2(props) {
           direction={{ sm: "column", md: "row" }}
           justify="space-between"
           align="center"
-          px="22px"
           w="100%"
           px={{ md: "22px" }}
         >

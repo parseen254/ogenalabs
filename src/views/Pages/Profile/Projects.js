@@ -15,6 +15,13 @@
 
 */
 
+import {
+  AdobexdLogo,
+  AtlassianLogo,
+  JiraLogo,
+  SlackLogo,
+  SpotifyLogo,
+} from "components/Icons/Icons";
 // Chakra imports
 import {
   Avatar,
@@ -28,34 +35,28 @@ import {
   MenuItem,
   MenuList,
   Text,
-  useColorModeValue,
   useColorMode,
+  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
-// Assets
-import avatar1 from "assets/img/avatars/avatar1.png";
-import avatar2 from "assets/img/avatars/avatar2.png";
-import avatar3 from "assets/img/avatars/avatar3.png";
-import avatar5 from "assets/img/avatars/avatar5.png";
-import avatar4 from "assets/img/avatars/avatar4.png";
-import avatar7 from "assets/img/avatars/avatar7.png";
+import { FaCube, FaPenFancy } from "react-icons/fa";
+import { IoDocumentsSharp, IoEllipsisVerticalSharp } from "react-icons/io5";
+import React, { useReducer } from "react";
+
+import { BsPlus } from "react-icons/bs";
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 import CardHeader from "components/Card/CardHeader";
-import IconBox from "components/Icons/IconBox";
-import {
-  AdobexdLogo,
-  AtlassianLogo,
-  JiraLogo,
-  SlackLogo,
-  SpotifyLogo,
-} from "components/Icons/Icons";
 import { HSeparator } from "components/Separator/Separator";
-import React, { useReducer } from "react";
-import { BsPlus } from "react-icons/bs";
-import { FaCube, FaPenFancy } from "react-icons/fa";
-import { IoDocumentsSharp, IoEllipsisVerticalSharp } from "react-icons/io5";
+import IconBox from "components/Icons/IconBox";
+// Assets
+import avatar1 from "assets/img/avatars/avatar1.png";
+import avatar2 from "assets/img/avatars/avatar2.png";
+import avatar3 from "assets/img/avatars/avatar3.png";
+import avatar4 from "assets/img/avatars/avatar4.png";
+import avatar5 from "assets/img/avatars/avatar5.png";
+import avatar7 from "assets/img/avatars/avatar7.png";
 
 const reducer = (state, action) => {
   if (action.type === "SWITCH_ACTIVE") {
@@ -290,7 +291,7 @@ function Projects() {
         templateRows={{ md: "repeat(3, auto)", lg: "repeat(2, auto)" }}
         gap="30px"
       >
-        <Card minH="100%" alignSelf="flex-start" minH="100%">
+        <Card minH="100%" alignSelf="flex-start">
           <CardHeader mb="18px">
             <Flex justify="space-between" w="100%">
               <Flex>
@@ -341,7 +342,7 @@ function Projects() {
           <CardBody>
             <Flex direction="column">
               <Text color="gray.400" fontSize="sm" fontWeight="normal">
-                If everything I did failed - which it doesn't, I think that it
+                If everything I did failed - which it doesnt, I think that it
                 actually succeeds.
               </Text>
               <HSeparator my="22px" />

@@ -15,8 +15,6 @@
 
 */
 
-import React, { useRef, useState } from "react";
-
 // Chakra imports
 import {
   Button,
@@ -36,12 +34,14 @@ import {
   Textarea,
   useColorModeValue,
 } from "@chakra-ui/react";
+import React, { useRef, useState } from "react";
+
+// Assets
+import { BsCircleFill } from "react-icons/bs";
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 import CardHeader from "components/Card/CardHeader";
-// Assets
-import { BsCircleFill } from "react-icons/bs";
 
 function NewUser() {
   const textColor = useColorModeValue("gray.700", "white");
@@ -603,7 +603,7 @@ function NewUser() {
                       </FormLabel>
                       <Input
                         variant="main"
-                        placeholder="Use an address you don't use frequently"
+                        placeholder="Use an address you dont use frequently"
                         fontSize="xs"
                       />
                     </FormControl>

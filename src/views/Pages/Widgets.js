@@ -15,6 +15,7 @@
 
 */
 
+import { AiFillBackward, AiFillForward } from "react-icons/ai";
 // Chakra imports
 import {
   Badge,
@@ -35,10 +36,7 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-// Assets
-import BackgroundCard1 from "assets/img/BackgroundCard1.png";
-import BgMusicCard from "assets/img/BgMusicCard.png";
-import BgMusicCardDark from "assets/img/bgMusicCardDark.png";
+import { BsBatteryCharging, BsMusicNoteBeamed } from "react-icons/bs";
 import {
   ClockIcon,
   DocumentIcon,
@@ -46,17 +44,6 @@ import {
   SettingsIcon,
   WalletIcon,
 } from "components/Icons/Icons";
-import { AiFillBackward, AiFillForward } from "react-icons/ai";
-import { BsBatteryCharging, BsMusicNoteBeamed } from "react-icons/bs";
-// Custom components
-import EventCalendar from "components/Calendars/EventCalendar";
-import Card from "components/Card/Card";
-import CardHeader from "components/Card/CardHeader";
-import LineChart from "components/Charts/LineChart";
-import IconBox from "components/Icons/IconBox";
-import { HSeparator } from "components/Separator/Separator";
-import TimelineRow from "components/Tables/TimelineRow";
-import React, { useState } from "react";
 import {
   FaCheckCircle,
   FaLightbulb,
@@ -67,8 +54,8 @@ import {
   FaUser,
   FaWallet,
 } from "react-icons/fa";
+import React, { useState } from "react";
 import { RiArrowDropRightLine, RiMastercardFill } from "react-icons/ri";
-import { calendarDataWidgets } from "variables/calendar";
 import {
   lineChartDataWidgets1,
   lineChartDataWidgets2,
@@ -77,6 +64,20 @@ import {
   lineChartOptionsWidgets2,
   lineChartOptionsWidgets3,
 } from "variables/charts";
+
+// Assets
+import BackgroundCard1 from "assets/img/BackgroundCard1.png";
+import BgMusicCard from "assets/img/BgMusicCard.png";
+import BgMusicCardDark from "assets/img/bgMusicCardDark.png";
+import Card from "components/Card/Card";
+import CardHeader from "components/Card/CardHeader";
+// Custom components
+import EventCalendar from "components/Calendars/EventCalendar";
+import { HSeparator } from "components/Separator/Separator";
+import IconBox from "components/Icons/IconBox";
+import LineChart from "components/Charts/LineChart";
+import TimelineRow from "components/Tables/TimelineRow";
+import { calendarDataWidgets } from "variables/calendar";
 import { timelineData } from "variables/general";
 
 function Widgets() {

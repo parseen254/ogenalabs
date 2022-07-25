@@ -33,22 +33,23 @@ import {
   Th,
   Thead,
   Tr,
-  useColorModeValue,
   useColorMode,
+  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import bgCardReports from "assets/img/background-card-reports.png";
+import { CartIcon, RocketIcon } from "components/Icons/Icons";
+
+import { AiFillLike } from "react-icons/ai";
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 import CardHeader from "components/Card/CardHeader";
-import IconBox from "components/Icons/IconBox";
-import { CartIcon, RocketIcon } from "components/Icons/Icons";
-import TablesReportsRow from "components/Tables/TablesReportsRow";
-import React from "react";
-import { AiFillLike } from "react-icons/ai";
 import { FaUser } from "react-icons/fa";
+import IconBox from "components/Icons/IconBox";
 import { IoEllipsisHorizontalSharp } from "react-icons/io5";
+import React from "react";
+import TablesReportsRow from "components/Tables/TablesReportsRow";
+import bgCardReports from "assets/img/background-card-reports.png";
 import { tablesReportsData } from "variables/general";
 
 function Reports() {
@@ -409,7 +410,7 @@ function Reports() {
                   <Text as="span" color={textColor} fontWeight="bold">
                     1,500,000 developers
                   </Text>{" "}
-                  used Creative Tim's products and over{" "}
+                  used Project products and over{" "}
                   <Text as="span" color={textColor} fontWeight="bold">
                     700,000 projects
                   </Text>{" "}

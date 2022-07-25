@@ -15,8 +15,6 @@
 
 */
 
-import React from "react";
-
 // Chakra imports
 import {
   Badge,
@@ -26,23 +24,25 @@ import {
   Grid,
   Icon,
   Image,
+  LightMode,
   Spacer,
   Stack,
   Text,
   useColorModeValue,
-  LightMode,
 } from "@chakra-ui/react";
-// Assets
-import productImage1 from "assets/img/product-page-1.png";
-import { CgShapeCircle } from "react-icons/cg";
-import { FaPencilAlt } from "react-icons/fa";
-import { MastercardIcon } from "components/Icons/Icons";
+
 // Custom components
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
-import IconBox from "components/Icons/IconBox";
+import { CgShapeCircle } from "react-icons/cg";
+import { FaPencilAlt } from "react-icons/fa";
 import { HSeparator } from "components/Separator/Separator";
+import IconBox from "components/Icons/IconBox";
+import { MastercardIcon } from "components/Icons/Icons";
+import React from "react";
+// Assets
+import productImage1 from "assets/img/product-page-1.png";
 
 function OrderDetails() {
   // Chakra color mode
@@ -110,6 +110,7 @@ function OrderDetails() {
                   alignSelf={{ sm: "flex-start", md: "auto" }}
                 >
                   <Image
+                    alt="product"
                     src={productImage1}
                     w="100%"
                     h="100%"
@@ -297,10 +298,9 @@ function OrderDetails() {
                   </Text>
                   <Flex
                     p="22px"
-                    bg="transparent"
                     borderRadius="8px"
                     width="100%"
-                    bg={bgPayment}
+                    bg={bgPayment || "transparent"}
                     border="1px solid"
                     borderColor={borderColor}
                     align="center"
